@@ -5,7 +5,7 @@
 npm-debug.log
 
 # Distribution folders
-dist/
+#dist/
 
 # Packages folders
 node_modules/
