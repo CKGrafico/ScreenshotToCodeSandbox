@@ -13,7 +13,8 @@
     "test:e2e": "start-server-and-test start http-get://localhost:4000 test:e2e:cypress",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "lint:scripts": "eslint \"./app/**/*.js\"",
-    "lint:styles": "stylelint \"./app/**/*.scss\""
+    "lint:styles": "stylelint \"./app/**/*.scss\"",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "husky": {
     "hooks": {}
