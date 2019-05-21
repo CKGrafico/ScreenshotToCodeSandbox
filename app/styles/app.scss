@@ -1,7 +1,8 @@
 // Vendor
 @import
   'vendor/normalize',
-  'vendor/bootstrap';
+  'vendor/bootstrap',
+  'vendor/filepond';
 
 // Base Helpers
 @import
@@ -14,11 +15,4 @@
 @import 'base/globals';
 
 // Components
-// Components structure (BEM no strict)
-// .ck- (the module)
-// .ck-component (the block)
-// .ck-component-child (the element)
-// DON'T DO THAT .ck-component-child-child2 - div.ck-component-child > div.ck-component-child-child2
-// BETTER THAT .ck-component-child .ck-component-child2 - div.ck-component-child > div.ck-component-child2
-// .ck-component--modifier (the modifier)
-@import 'components/ck-site';
+@import 'components/conversor';
