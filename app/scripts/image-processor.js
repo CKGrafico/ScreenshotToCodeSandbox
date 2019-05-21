@@ -1,8 +1,14 @@
 import worker from 'tesseract.js';
 import { bus, BusEvent } from './bus';
+import { templateString } from './post-processors';
 
-function processCode(code) {
-  // TODO: Process the result to improve it
+const postProcessors = [
+  templateString
+];
+
+function postProcessCode(code) {
+  postProcessors.forEach(x => (code = x(code)));
+
   return code;
 }
 
@@ -13,7 +19,7 @@ export function processImage(image) {
   worker
     .recognize(image)
     .then(result => {
-      const processedCode = processCode(result.text);
+      const processedCode = postProcessCode(result.text);
 
       bus.emit(BusEvent.ImageProcessed, null, processedCode);
     });
