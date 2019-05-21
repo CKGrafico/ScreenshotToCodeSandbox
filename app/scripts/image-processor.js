@@ -1,9 +1,10 @@
 import worker from 'tesseract.js';
 import { bus, BusEvent } from './bus';
-import { templateString } from './post-processors';
+import { templateString, emptyArray } from './post-processors';
 
 const postProcessors = [
-  templateString
+  templateString,
+  emptyArray
 ];
 
 function postProcessCode(code) {
