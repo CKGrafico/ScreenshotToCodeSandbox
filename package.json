@@ -25,6 +25,7 @@
     "cypress": "^3.2.0",
     "filepond": "^4.4.7",
     "js-beautify": "^1.10.0",
+    "js-event-bus": "^1.0.0",
     "normalize-scss": "7.0.1",
     "tesseract.js": "^1.0.19"
   },

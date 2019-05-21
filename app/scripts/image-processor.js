@@ -1,14 +1,19 @@
 import worker from 'tesseract.js';
+import { bus, BusEvent } from './bus';
 
 function processCode(code) {
   return code;
 }
 
-export function processImage(image, callback) {
+export function processImage(image) {
+  bus.emit(BusEvent.HideResults);
+  bus.emit(BusEvent.ShowLoading);
+
   worker
     .recognize(image)
     .then(result => {
       const processedCode = processCode(result.text);
-      callback(processedCode);
+
+      bus.emit(BusEvent.ImageProcessed, null, processedCode);
     });
 }

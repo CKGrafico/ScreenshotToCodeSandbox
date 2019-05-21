@@ -1,6 +1,8 @@
 import * as FilePond from 'filepond';
+import { bus, BusEvent } from './bus';
 
-export function createFilePicker($container, callback) {
+
+export function createFilePicker($container) {
   const file = FilePond.create({
     multiple: true,
     name: 'file'
@@ -8,5 +10,7 @@ export function createFilePicker($container, callback) {
 
   $container.appendChild(file.element);
 
-  $container.querySelector('.filepond--root').addEventListener('FilePond:addfile', () => callback(file.getFile().file));
+  $container.querySelector('.filepond--root').addEventListener('FilePond:addfile', () => {
+    bus.emit(BusEvent.FileAdded, null, file.getFile().file);
+  });
 }
