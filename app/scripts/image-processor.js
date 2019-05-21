@@ -2,6 +2,7 @@ import worker from 'tesseract.js';
 import { bus, BusEvent } from './bus';
 
 function processCode(code) {
+  // TODO: Process the result to improve it
   return code;
 }
 

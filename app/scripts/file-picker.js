@@ -11,6 +11,10 @@ export function createFilePicker($container) {
   $container.appendChild(file.element);
 
   $container.querySelector('.filepond--root').addEventListener('FilePond:addfile', () => {
-    bus.emit(BusEvent.FileAdded, null, file.getFile().file);
+    const data = file.getFile();
+
+    // TODO: Add validators here
+
+    bus.emit(BusEvent.FileAdded, null, data.file);
   });
 }
