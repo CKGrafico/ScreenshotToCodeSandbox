@@ -24,13 +24,13 @@ module.exports = env => {
       rules: [
         ...rules.files,
         rules.scripts,
-        rules.styles,
+        rules.styles
       ]
     },
     plugins: [
       plugins.html,
       plugins.globals,
-      plugins.extractStyles,
+      plugins.extractStyles
     ],
     devServer: {
       open: true,
@@ -51,10 +51,10 @@ module.exports = env => {
             chunks: 'all',
             test: path.resolve(__dirname, 'node_modules'),
             name: 'vendor',
-            enforce: true,
-          },
-        },
-      },
+            enforce: true
+          }
+        }
+      }
     },
     resolve: {
       alias: {
@@ -64,5 +64,5 @@ module.exports = env => {
       }
     },
     devtool: (() => environment === 'production' ? false : 'inline-source-map')()
-  })
+  });
 };
