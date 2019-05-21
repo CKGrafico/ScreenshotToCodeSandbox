@@ -16,8 +16,7 @@
     "lint:styles": "stylelint \"./app/**/*.scss\""
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
@@ -25,6 +24,7 @@
     "codesandbox": "^2.1.6",
     "cypress": "^3.2.0",
     "filepond": "^4.4.7",
+    "js-beautify": "^1.10.0",
     "normalize-scss": "7.0.1",
     "tesseract.js": "^1.0.19"
   },
