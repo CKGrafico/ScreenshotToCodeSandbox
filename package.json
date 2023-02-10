@@ -28,7 +28,7 @@
     "js-beautify": "^1.10.0",
     "js-event-bus": "^1.0.0",
     "normalize-scss": "7.0.1",
-    "tesseract.js": "^1.0.19"
+    "tesseract.js": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
