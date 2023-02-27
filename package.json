@@ -23,7 +23,7 @@
     "@babel/polyfill": "^7.4.3",
     "bootstrap": "^4.3.1",
     "codesandbox": "^2.1.6",
-    "cypress": "^3.2.0",
+    "cypress": "^12.7.0",
     "filepond": "^4.4.7",
     "js-beautify": "^1.10.0",
     "js-event-bus": "^1.0.0",
